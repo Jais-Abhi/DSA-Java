@@ -1,5 +1,11 @@
 class Solution {
     public boolean checkString(String s) {
-        return s.indexOf("ba") == -1;
+        boolean flag = false;
+
+        for(char ch : s.toCharArray()){
+            if(ch == 'b') flag = true;
+            else if (flag) return false;;
+        }
+        return true;
     }
 }
